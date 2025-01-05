@@ -110,28 +110,28 @@
 
 
 
-// fn main() {
-//     let s1 = String::from("hello");
-//     let s2 = s1.clone();
+fn main() {
+    let s1 = String::from("hello");
+    let s2 = s1.clone();
 
-//     println!("s1 = {s1}, s2 = {s2}");
-// }
-
-
-
-fn first_word(s: &String) -> usize {
-    let bytes = s.as_bytes();
-
-    for (i, &item) in bytes.iter().enumerate() {
-        if item == b' ' {
-            return i;
-        }
-    }
-
-    s.len()
+    println!("s1 = {s1}, s2 = {s2}");
 }
 
-fn main() {}
+
+
+// fn first_word(s: &String) -> usize {
+//     let bytes = s.as_bytes();
+
+//     for (i, &item) in bytes.iter().enumerate() {
+//         if item == b' ' {
+//             return i;
+//         }
+//     }
+
+//     s.len()
+// }
+
+// fn main() {}
 
 
 
