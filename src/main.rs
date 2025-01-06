@@ -110,12 +110,13 @@
 
 
 
-fn main() {
-    let s1 = String::from("hello");
-    let s2 = s1.clone();
+// fn main() {
+//     let s1 = String::from("hello");
+//     let s2 = s1.clone();
 
-    println!("s1 = {s1}, s2 = {s2}");
-}
+//     println!("s1 = {s1}, s2 = {s2}");
+// }
+
 
 
 
@@ -129,9 +130,77 @@ fn main() {
 //     }
 
 //     s.len()
+
 // }
 
-// fn main() {}
+// fn main() {
+//     // let mut s = String::from("hello world");
+//     let s = String::from("AFOLABI Mercy");
+
+//     let word = first_word(&s); // word will get the value 5
+
+//     // s.clear(); // this empties the String, making it equal to ""
+
+//     // word still has the value 5 here, but there's no more string that
+//     // we could meaningfully use the value 5 with. word is now totally invalid!
+
+    
+//     println!("{}", word);
+
+// }
+
+
+
+fn main() {
+// https://doc.rust-lang.org/book/ch04-03-slices.html#string-slices
+
+    // let s = String::from("hello world");
+    let s = String::from("APHOLABI MEXICO");
+    let arr = [1,2,3,4,5,6];
+
+    // let hell = &s[0..5];
+    // let wor = &s[6..11];
+
+    let nick = &s[..4];
+    let country = &s[9..];
+    let length = s.len();
+
+    println!("{}", nick);
+    println!("{}", country);
+    // println!("{}", s.length);
+    println!("{}", &s[..]);
+    println!("{}", &s[0..length]);
+    println!("{}", length);
+    
+    let slice = &arr[1..4];
+    println!("{:?}", slice);
+
+    let eq = assert_eq!(slice, &[2, 3]);
+
+    println!("{:?}", eq);
+    
+}
+
+
+// fn first_word(s: &String) -> &str {
+//     let bytes = s.as_bytes();
+
+//     for (i, &item) in bytes.iter().enumerate() {
+//         if item == b' ' {
+//             return &s[0..i];
+//         }
+//     }
+
+//     &s[..]
+//     // println!("{}", &s[..]);
+// }
+
+// fn main() {
+//     // println!("{}", &s[..]);
+
+// }
+
+
 
 
 
