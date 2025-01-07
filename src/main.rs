@@ -151,35 +151,37 @@
 
 
 
-fn main() {
-// https://doc.rust-lang.org/book/ch04-03-slices.html#string-slices
+// fn main() {
+// // https://doc.rust-lang.org/book/ch04-03-slices.html#string-slices
 
-    // let s = String::from("hello world");
-    let s = String::from("APHOLABI MEXICO");
-    let arr = [1,2,3,4,5,6];
+//     // let s = String::from("hello world");
+//     let s = String::from("APHOLABI MEXICO");
+//     let arr = [1,2,3,4,5,6];
 
-    // let hell = &s[0..5];
-    // let wor = &s[6..11];
+//     // let hell = &s[0..5];
+//     // let wor = &s[6..11];
 
-    let nick = &s[..4];
-    let country = &s[9..];
-    let length = s.len();
+//     let nick = &s[..4];
+//     let country = &s[9..];
+//     let length = s.len();
 
-    println!("{}", nick);
-    println!("{}", country);
-    // println!("{}", s.length);
-    println!("{}", &s[..]);
-    println!("{}", &s[0..length]);
-    println!("{}", length);
+//     println!("{}", nick);
+//     println!("{}", country);
+//     // println!("{}", s.length);
+//     println!("{}", &s[..]);
+//     println!("{}", &s[0..length]);
+//     println!("{}", length);
     
-    let slice = &arr[1..4];
-    println!("{:?}", slice);
+//     let slice = &arr[1..4];
+//     println!("{:?}", slice);
 
-    let eq = assert_eq!(slice, &[2, 3]);
+//     let eq = assert_eq!(slice, &[2, 3]);
 
-    println!("{:?}", eq);
+//     println!("{:?}", eq);
     
-}
+// }
+
+
 
 
 // fn first_word(s: &String) -> &str {
@@ -201,6 +203,50 @@ fn main() {
 // }
 
 
+// STRUCT
+
+// struct User {
+//     username: String,
+//     email: String,
+//     sign_in_count: u64,
+//     active: bool,
+// }
+
+// fn main() {
+//     let user1 = User {
+//         username: String::from("Aphomer"),
+//         email: String::from("aaphomer@example.com"),
+//         sign_in_count: 1,
+//         active: true,
+//     };
+// }
+
+// MUTABLE
+// fn main() {
+//     let mut user1 = User {
+//         active: true,
+//         username: String::from("Aphomer"),
+//         email: String::from("aaphomer@example.com"),
+//         sign_in_count: 1,
+//     };
+
+//     user1.email = String::from("aaphomer1@example.com");
+// }
+
+
+
+// AREA OF A RECTANGLE
+
+fn main () {
+    let length = 20;
+    let breadth = 5;
+
+    println!("The area of this Carton is {} square pixels...", carton_area(length, breadth));
+}
+
+fn carton_area(length: u32, breadth: u32) -> u32 {
+    length * breadth
+}
 
 
 
