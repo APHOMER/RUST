@@ -205,21 +205,23 @@
 
 // STRUCT
 
-// struct User {
-//     username: String,
-//     email: String,
-//     sign_in_count: u64,
-//     active: bool,
-// }
+struct User {
+    username: String,
+    email: String,
+    sign_in_count: u64,
+    active: bool,
+}
 
-// fn main() {
-//     let user1 = User {
-//         username: String::from("Aphomer"),
-//         email: String::from("aaphomer@example.com"),
-//         sign_in_count: 1,
-//         active: true,
-//     };
-// }
+fn main() {
+    let user1 = User {
+        username: String::from("Aphomer"),
+        email: String::from("aaphomer@example.com"),
+        sign_in_count: 1,
+        active: true,
+    };
+}
+
+
 
 // MUTABLE
 // fn main() {
