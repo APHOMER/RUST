@@ -205,21 +205,21 @@
 
 // STRUCT
 
-struct User {
-    username: String,
-    email: String,
-    sign_in_count: u64,
-    active: bool,
-}
+// struct User {
+//     username: String,
+//     email: String,
+//     sign_in_count: u64,
+//     active: bool,
+// }
 
-fn main() {
-    let user1 = User {
-        username: String::from("Aphomer"),
-        email: String::from("aaphomer@example.com"),
-        sign_in_count: 1,
-        active: true,
-    };
-}
+// fn main() {
+//     let user1 = User {
+//         username: String::from("Aphomer"),
+//         email: String::from("aaphomer@example.com"),
+//         sign_in_count: 1,
+//         active: true,
+//     };
+// }
 
 
 
@@ -239,15 +239,34 @@ fn main() {
 
 // AREA OF A RECTANGLE
 
-fn main () {
-    let length = 20;
-    let breadth = 5;
+// fn main () {
+//     let length = 20;
+//     let breadth = 5;
 
-    println!("The area of this Carton is {} square pixels...", carton_area(length, breadth));
+//     println!("The area of this Carton is {} square pixels...", carton_area(length, breadth));
+// }
+
+// fn carton_area(length: u32, breadth: u32) -> u32 {
+//     length * breadth
+// }
+
+struct Rectangle {
+    length: u32,
+    breadth: u32,
 }
 
-fn carton_area(length: u32, breadth: u32) -> u32 {
-    length * breadth
+fn main() {
+    let rect1 = Rectangle {
+        length: 30,
+        breadth: 40,
+    };
+
+    println!( "The are of the rectangle is {} square pixels.", area(&rect1));
+
+}
+
+fn area(rectangle: &Rectangle) -> u32 {
+    rectangle.length * rectangle.breadth;
 }
 
 
