@@ -250,24 +250,174 @@
 //     length * breadth
 // }
 
-struct Rectangle {
-    length: u32,
-    breadth: u32,
-}
+
+
+
+///////////////////////////////////
+
+// struct Rectangle {
+//     length: u32,
+//     breadth: u32,
+// }
+
+// fn main() {
+//     let rect1 = Rectangle {
+//         length: 30,
+//         breadth: 40,
+//     };
+
+//     println!( "The area of the rectangle is {} square pixels.", area(&rect1));
+
+// }
+
+// fn area(rectangle: &Rectangle) -> u32 {
+//     rectangle.length * rectangle.breadth
+// }
+
+
+
+// DERIVE
+
+// #[derive(Debug)]
+// struct Rectangle {
+//     length: u32,
+//     breadth: u32,
+// }
+
+// fn main () {
+//     let rect1 = Rectangle {
+//         length: 25,
+//         breadth: 35,
+//     };
+
+//     // println!("RECT1 IS {rect1:?}");
+//     println!("RECT1 IS {rect1:#?}");
+// }
+
+
+
+// #[derive(Debug)]
+// struct Rectangle {
+    // length: u32,
+    // breadth: u32,
+// }
+
+// fn main() {
+//     let scale = 2;
+//     let rect1 = Rectangle {
+    // length: dbg!(30 * scale),
+    // breadth: 50,
+//     };
+
+//     dbg!(&rect1);
+// }
+
+
+// DEFINING METHODS
+
+// #[derive(Debug)]
+// struct Rectangle {
+//     length: u32,
+//     breadth: u32,
+// }
+
+// impl Rectangle {
+//     fn area(&self) -> u32 {
+//         self.length * self.breadth
+//     }
+
+//     fn perimeter(&self) -> u32 {
+//         (self.length * 2) + (self.breadth * 2)
+//     }
+// }
+
+// fn main() {
+//     let rect1 = Rectangle {
+//         length: 20,
+//         breadth: 40,
+//     };
+
+//     println!("The area of the rectancgle is {} square pixels", rect1.area());
+
+//     println!("The perimeter of the Rectangle is {} square meters", rect1.perimeter())
+// }
+
+
+
+// #[derive(Debug)]
+// struct Rectangle {
+//     length: u32,
+//     breadth: u32,
+// }
+
+// impl Rectangle {
+//     fn length(&self) -> bool {
+//         self.length > 0
+//     }
+
+//     fn can_hold(&self, other: &Rectangle) -> bool {
+//         self.length > other.length && self.breadth > other.breadth
+//     }
+// }
+
+// fn main() {
+//     let rect1 = Rectangle {
+//         length: 30,
+//         breadth: 50,
+//     };
+
+//     if rect1.length() {
+//         println!("The rectangle has a nonzero length; it is {}", rect1.length);
+//     }
+// }
+
+
+// fn main() {
+//     let rect1 = Rectangle {
+//         length: 30,
+//         breadth: 50,
+//     };
+//     let rect2 = Rectangle {
+//         length: 10,
+//         breadth: 40,
+//     };
+//     let rect3 = Rectangle {
+//         length: 60,
+//         breadth: 45,
+//     };
+
+//     println!("Can rect1 hold rect2? {}", rect1.can_hold(&rect2));
+//     println!("Can rect1 hold rect3? {}", rect1.can_hold(&rect3));
+//     println!("Can rect3 hold rect1? {}", rect3.can_hold(&rect1));
+//     println!("Can rect3 hold rect2? {}", rect3.can_hold(&rect2));
+// }
+
+
+
+// ENUM
 
 fn main() {
-    let rect1 = Rectangle {
-        length: 30,
-        breadth: 40,
+    enum IpAddrKind {
+        V4,
+        V6,
+    }
+
+    struct IpAddr {
+        kind: IpAddrKind,
+        address: String,
+    }
+
+    let home = IpAddr {
+        kind: IpAddrKind::V4,
+        address: String::from("127.0.0.1"),
     };
 
-    println!( "The are of the rectangle is {} square pixels.", area(&rect1));
-
+    let loopback = IpAddr {
+        kind: IpAddrKind::V6,
+        address: String::from("::1"),
+    };
 }
 
-fn area(rectangle: &Rectangle) -> u32 {
-    rectangle.length * rectangle.breadth;
-}
 
 
 
