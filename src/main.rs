@@ -582,17 +582,29 @@
 
 // Finally, we’ll change the rules of the game one more time so that nothing else happens on your turn if you roll anything other than a 3 or a 7. We can express that by using the unit value (the empty tuple type we mentioned in “The Tuple Type” section) as the code that goes with the _ arm:
 
-fn main() {
-    let dice_roll = 9;
-    match dice_roll {
-        3 => add_fancy_hat(),
-        7 => remove_fancy_hat(),
-        _ => (),
-    }
+// fn main() {
+//     let dice_roll = 9;
+//     match dice_roll {
+//         3 => add_fancy_hat(),
+//         7 => remove_fancy_hat(),
+//         _ => (),
+//     }
 
-    fn add_fancy_hat() {}
-    fn remove_fancy_hat() {}
+//     fn add_fancy_hat() {}
+//     fn remove_fancy_hat() {}
+// }
+
+
+
+use crate::garden::vegetables::Asparagus;
+
+pub mod garden;
+
+fn main() {
+    let plant = Asparagus {};
+    println!("I'm growing {plant:?}!");
 }
+
 
 
 
